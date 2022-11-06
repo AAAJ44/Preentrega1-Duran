@@ -21,10 +21,10 @@ const ItemDetail = ({ item }) => {
             <div>
                 <h2>{item.title}</h2>
                 <p>
-                    Las mejores sneakers al alcance de tu mano
+                    Las mejores remeras a solo un click
                 </p>
                 <p>
-                    No dudes en consultarnos!
+                    Tu consulta no molesta!
                 </p>
 
                {unidades === 0 ? (

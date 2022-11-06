@@ -30,7 +30,7 @@ const Cart = () => {
                 </div>
             ))}
             <h2>Total: ${total()}</h2>
-            <button onClick={deleteAll}>Eliminar todo el carrito</button>
+            <button onClick={deleteAll}>Eliminar el carrito</button>
             <Link 
                  style={{
                     border: '1px solid black',

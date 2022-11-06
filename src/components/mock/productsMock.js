@@ -2,6 +2,7 @@ export const products = [
 
     //NIKE
     {
+        id: 1,
         title: 'Nike',
         price: 120,
         stock: 15,
@@ -25,6 +26,7 @@ export const products = [
         img: 'public\img\Nikelightblue.jpg',
     },
     {
+        id: 4,
         title: 'Nike orange',
         price: 100,
         stock: 15,
@@ -32,6 +34,7 @@ export const products = [
         img: 'public\img\nikeorange.jpg',
     },
     {
+        id: 5,
         title: 'Nike white',
         price: 100,
         stock: 15,
@@ -43,6 +46,7 @@ export const products = [
 
     //ADIDAS
     {
+        id: 6,
         title: 'Adidas Black',
         price: 70,
         stock: 10,
@@ -50,6 +54,7 @@ export const products = [
         img: 'public\img\adidasblack.jpg',
     },
     {
+        id: 7,
         title: 'Adidas Blue',
         price: 80,
         stock: 10,
@@ -57,6 +62,7 @@ export const products = [
         img: 'public\img\adidasblue.jpg',
     },
     {
+        id: 8,
         title: 'Adidas France',
         price: 50,
         stock: 10,
@@ -64,6 +70,7 @@ export const products = [
         img:'public\img\adidasfrance.jpg',
     },
     {
+        id: 9,
         title: 'Adidas Green',
         price: 50,
         stock: 10,
@@ -71,6 +78,7 @@ export const products = [
         img: 'public\img\adidasgreen.jpg',
     },
     {
+        id: 10,
         title: 'Adidas White',
         price: 50,
         stock: 10,
@@ -83,6 +91,7 @@ export const products = [
 
     //VANS
     {
+        id: 11,
         title: 'Vans',
         price: 30,
         stock: 5,
@@ -90,6 +99,7 @@ export const products = [
         img: 'public\img\vans.jpg'
     },
     {
+        id: 12,
         title: 'Vans Black',
         price: 30,
         stock: 5,
@@ -97,6 +107,7 @@ export const products = [
         img: 'public\img\vansblack.jpg',
     },
     {
+        id: 13,
         title: 'Vans Clasic',
         price: 35,
         stock: 5,
@@ -104,6 +115,7 @@ export const products = [
         img: 'public\img\vansclasic.jpg',
     },
     {
+        id: 14,
         title: 'Vans Green',
         price: 40,
         stock: 5,
@@ -111,6 +123,7 @@ export const products = [
         img: 'public\img\vansgreen.jpg',
     },
     {
+        id: 20,
         title: 'Vans Grey',
         price: 40,
         stock: 5,
@@ -121,6 +134,7 @@ export const products = [
 
     //NEW BALANCE
     {
+        id: 16,
         title: 'New Balance Black',
         price: 50,
         stock: 10,
@@ -128,6 +142,7 @@ export const products = [
         img: 'public\img\nbblack.jpg',
     }, 
     {
+        id: 17,
         title: 'New Balance Clasic',
         price: 50,
         stock: 10,
@@ -135,6 +150,7 @@ export const products = [
         img: 'public\img\nbclasic.jpg',
     }, 
     {
+        id: 18,
         title: 'New Balance Grey',
         price: 40,
         stock: 10,
@@ -142,6 +158,7 @@ export const products = [
         img: 'public\img\nbgrey.jpg',
     },  
     {
+        id: 19,
         title: 'New Balance Vintage',
         price: 45,
         stock: 10,
@@ -149,6 +166,7 @@ export const products = [
         img: 'public\img\nbvintage.jpg',
     },
     {
+        id: 21,
         title: 'New Balance White',
         price: 45,
         stock: 10,
