@@ -1,43 +1,58 @@
 import React, { useEffect, useState } from 'react';
 import ItemList from './ItemList'; 
-import { products } from '.././mock/productsMock';
 import { useParams } from 'react-router-dom';
+import RotateLoader  from 'react-spinners/RotateLoader';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../services/firebaseConfig';
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(true)
 
+    
 
     const { categoryName } = useParams();
  
 
     useEffect(() => {
-        const traerProductos = () => {
-            return new Promise((res, rej) => {
-                const prodFiltrados = products.filter(
-                    (prod) => prod.category === categoryName
-                );
-                const prod = categoryName ? prodFiltrados : products;
-                setTimeout(() => {
-                    res(prod);
-                }, 500);
-            });
-        };
-        traerProductos()
-            .then((res) => {
-                setItems(res);
-            })
-            .catch((error) => {
+       
+        const collectionProd= collection (db, 'productos')
+       
+        const referencia = categoryName
+            ? query(collectionProd, where('category', '==', categoryName) )
+            : collectionProd
+        
+            
+        getDocs(referencia)
+            .then((res)=> {
+                const products = res.docs.map((prod) => {
+                    return{
+                        id:prod.id,
+                        ...prod.data(),
+                    };
+                });
+            
+               setItems(products)
+             })
+            .catch((error)=> {
                 console.log(error);
+             })
+            .finally (()=>{
+                setLoading(false);
             });
     }, [categoryName]);
 
-   
 
     return (
         <main>
-            <div className="item-list-container">
-                <ItemList items={items} />
-            </div>
+        {loading?
+                <div className="item-list-container">
+                <RotateLoader color='black'/>
+                </div>
+                :<div className="item-list-container">
+                        <ItemList items={items} />
+                </div>  
+        }
         </main>
     );
 };
