@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CartWidget from './CartWidget';
 import { Link, NavLink } from 'react-router-dom';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../services/firebaseConfig';
+import { db } from '../../services/firebaseConfig';
 
 const Navbar = () => {
 
